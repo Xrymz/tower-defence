@@ -267,8 +267,8 @@ define(	'game', ['wave', 'tower', 'enemy', 'perm', 'map', 'utils', 'entity', 'op
 					if( Entity.prototype.intersects.call( temporary_rectangle, {
 						'x': m.min(this.path[i][0]*32,this.path[i+1][0]*32),
 						'y': m.min(this.path[i][1]*32,this.path[i+1][1]*32),
-						'w': m.abs(this.path[i][0]*32-this.path[i+1][0]*32),
-						'h': m.abs(this.path[i][1]*32-this.path[i+1][1]*32)
+						'w': m.abs(this.path[i][0]*32-this.path[i+1][0]*32+32),
+						'h': m.abs(this.path[i][1]*32-this.path[i+1][1]*32+32)
 					})){
 						is_tower_placement_valid = false;
 						break check_intersection_loop;
